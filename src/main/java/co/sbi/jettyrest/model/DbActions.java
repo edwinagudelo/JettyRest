@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.sbi.jettyrest.model;
 
 import java.sql.Connection;
@@ -21,9 +17,7 @@ public class DbActions {
     static final Logger logger = LoggerFactory.getLogger(DbActions.class);
     
     public static String getVersion(){
-        
         String retorno = "";
-        
         try{
             Connection conn = DbConnection.getConnection();
             PreparedStatement ps = conn.prepareStatement("Select version()");
@@ -35,9 +29,7 @@ public class DbActions {
             logger.error("Error al traer la version de la base de datos", sqlex);
             retorno = "Error";
         }
-        
         return retorno;
-        
     }
     
 }
