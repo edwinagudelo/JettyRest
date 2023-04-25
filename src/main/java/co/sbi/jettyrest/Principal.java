@@ -14,7 +14,7 @@ import org.glassfish.jersey.servlet.ServletContainer;
 
 /**
  *
- * @author ICM7223A
+ * @author Edwin Agudelo (edwin.agudelo@gmail.com)
  */
 public class Principal {
     
@@ -28,10 +28,11 @@ public class Principal {
         logger.info("Cargando archivo properties principal");
         
         try{
-            prop.load(new FileInputStream(new File("resources/config.properties")));
+            prop.load(new FileInputStream("resources/config.properties"));
             logger.info("Puerto:" + prop.getProperty("application.port"));
         }catch(IOException ioex){
             logger.error("Error al cargar el archivo properties", ioex);
+            return;
         }
         
         Server server = new Server(Integer.parseInt(prop.getProperty("application.port","8280")));

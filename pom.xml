@@ -117,9 +117,6 @@
                             <mainClass>co.sbi.jettyrest.Principal</mainClass>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
-                        <!--<manifestEntries>
-                            <Class-Path>lib/</Class-Path>
-                        </manifestEntries>-->
                     </archive>
                 </configuration>
             </plugin>
