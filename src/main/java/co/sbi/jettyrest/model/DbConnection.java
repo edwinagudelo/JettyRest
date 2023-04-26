@@ -16,9 +16,6 @@ public class DbConnection {
     private static HikariDataSource ds;
     
     static {
-        //config.setJdbcUrl("jdbc:postgresql://192.168.0.201/desarrollo");
-        //config.setUsername("edwin");
-        //config.setPassword("edwin");
         ds = new HikariDataSource(config);
     }
     
