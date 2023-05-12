@@ -1,6 +1,6 @@
 package co.sbi.jettyrest.rest;
 
-import co.sbi.jettyrest.model.DbActions;
+import co.sbi.jettyrest.infrastructure.DbActions;
 import java.util.HashMap;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

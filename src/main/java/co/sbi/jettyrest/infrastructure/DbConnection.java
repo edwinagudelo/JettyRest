@@ -1,5 +1,5 @@
 
-package co.sbi.jettyrest.model;
+package co.sbi.jettyrest.infrastructure;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -8,7 +8,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 /**
  *
- * @author ICM7223A
+ * @author Edwin Agudelo (edwin.agudelo@gmail.com)
  */
 public class DbConnection {
     
