@@ -11,6 +11,8 @@ import com.zaxxer.hikari.HikariDataSource;
  * @author Edwin Agudelo (edwin.agudelo@gmail.com)
  */
 public class DbConnection {
+
+    private DbConnection(){}
     
     private static HikariConfig config = new HikariConfig("resources/dbaccess.properties");
     private static HikariDataSource ds;
@@ -18,8 +20,6 @@ public class DbConnection {
     static {
         ds = new HikariDataSource(config);
     }
-    
-    private DbConnection(){}
     
     public static Connection getConnection() throws SQLException{
         return ds.getConnection();
