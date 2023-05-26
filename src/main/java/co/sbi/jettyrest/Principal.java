@@ -26,8 +26,8 @@ public class Principal {
         logger.info("Iniciando aplicacion");
         logger.info("Cargando archivo properties principal");
         
-        try{
-            prop.load(new FileInputStream("resources/config.properties"));
+        try(FileInputStream fistr = new FileInputStream("resources/config.properties")){
+            prop.load(fistr);
             logger.info("Puerto:" + prop.getProperty("application.port"));
         }catch(IOException ioex){
             logger.error("Error al cargar el archivo properties", ioex);

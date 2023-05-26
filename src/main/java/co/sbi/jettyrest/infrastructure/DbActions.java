@@ -18,9 +18,7 @@ public class DbActions {
     
     public static String getVersion(){
         String retorno = "";
-        try{
-            Connection conn = DbConnection.getConnection();
-            PreparedStatement ps = conn.prepareStatement("Select version()");
+        try(Connection conn = DbConnection.getConnection();PreparedStatement ps = conn.prepareStatement("Select version()")){
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 retorno = rs.getString(1);
