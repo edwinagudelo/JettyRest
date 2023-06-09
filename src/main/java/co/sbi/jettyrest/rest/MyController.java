@@ -1,6 +1,6 @@
 package co.sbi.jettyrest.rest;
 
-import co.sbi.jettyrest.repositories.DbActions;
+import co.sbi.jettyrest.infrastructure.repositories.DbActions;
 import java.util.HashMap;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -9,7 +9,7 @@ import jakarta.ws.rs.core.MediaType;
 
 /**
  *
- * @author ICM7223A
+ * @author Edwin Agudelo (edwin.agudelo@gmail.com)
  */
 @Path("api")
 public class MyController {

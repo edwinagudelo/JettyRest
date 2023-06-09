@@ -5,6 +5,7 @@ using Jetty embedded.
 
 ## Some features
 
-Use the Hikari Connection pooling libray to access a PostgresDB
+- Use the Hikari Connection pooling library to access a PostgresDB
+- Use Jakarta instead of Javax
 
 

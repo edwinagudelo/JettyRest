@@ -1,5 +1,4 @@
-
-package co.sbi.jettyrest.repositories;
+package co.sbi.jettyrest.infrastructure.repositories;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -10,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author ICM7223A
+ * @author Edwin Agudelo (edwin.agudelo@gmail.com)
  */
 public class DbActions {
     
@@ -18,9 +17,7 @@ public class DbActions {
     
     public static String getVersion(){
         String retorno = "";
-        try{
-            Connection conn = DbConnection.getConnection();
-            PreparedStatement ps = conn.prepareStatement("Select version()");
+        try(Connection conn = DbConnection.getConnection();PreparedStatement ps = conn.prepareStatement("Select version()")){
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 retorno = rs.getString(1);

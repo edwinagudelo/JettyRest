@@ -4,7 +4,7 @@
  */
 package co.sbi.jettyrest.model;
 
-import co.sbi.jettyrest.repositories.DbActions;
+import co.sbi.jettyrest.infrastructure.repositories.DbActions;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
