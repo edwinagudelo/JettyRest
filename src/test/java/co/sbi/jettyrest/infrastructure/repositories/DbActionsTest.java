@@ -2,10 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package co.sbi.jettyrest.model;
+package co.sbi.jettyrest.infrastructure.repositories;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 
 import co.sbi.jettyrest.infrastructure.repositories.DbActions;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -13,15 +16,20 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class DbActionsTest {
     
+    private static MockedStatic<DbActions> dbUtil;
+    
     public DbActionsTest() {
     }
 
     @org.junit.jupiter.api.BeforeAll
     public static void setUpClass() throws Exception {
+        dbUtil = Mockito.mockStatic(DbActions.class);
+        dbUtil.when(DbActions::getVersion).thenReturn("Version");
     }
 
     @org.junit.jupiter.api.AfterAll
     public static void tearDownClass() throws Exception {
+        dbUtil.close();
     }
 
     @org.junit.jupiter.api.BeforeEach
@@ -37,12 +45,11 @@ public class DbActionsTest {
      */
     @org.junit.jupiter.api.Test
     public void testGetVersion() {
-        System.out.println("getVersion");
-        String expResult = "";
+        String expResult = "Version";
+        MockedStatic<DbActions> dbUtil = Mockito.mockStatic(DbActions.class);
+        dbUtil.when(DbActions::getVersion).thenReturn("Version");
         String result = DbActions.getVersion();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

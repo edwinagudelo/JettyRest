@@ -1,4 +1,4 @@
-package co.sbi.jettyrest.rest;
+package co.sbi.jettyrest.web.rest;
 
 import co.sbi.jettyrest.infrastructure.repositories.DbActions;
 import java.util.HashMap;
