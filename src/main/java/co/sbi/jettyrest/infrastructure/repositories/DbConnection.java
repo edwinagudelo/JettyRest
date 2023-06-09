@@ -1,5 +1,4 @@
-
-package co.sbi.jettyrest.infrastructure;
+package co.sbi.jettyrest.infrastructure.repositories;
 
 import java.sql.Connection;
 import java.sql.SQLException;

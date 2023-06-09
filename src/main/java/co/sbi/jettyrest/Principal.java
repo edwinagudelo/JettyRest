@@ -42,7 +42,7 @@ public class Principal {
         
         ServletHolder serHol = ctx.addServlet(ServletContainer.class, "/test/rest/*");
         serHol.setInitOrder(1);
-        serHol.setInitParameter("jersey.config.server.provider.packages", "co.sbi.jettyrest.rest");
+        serHol.setInitParameter("jersey.config.server.provider.packages", "co.sbi.jettyrest.web.rest");
         
         try{
             logger.info("Iniciando Servidor");
