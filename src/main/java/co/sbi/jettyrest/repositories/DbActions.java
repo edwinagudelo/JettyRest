@@ -1,5 +1,5 @@
 
-package co.sbi.jettyrest.model;
+package co.sbi.jettyrest.repositories;
 
 import java.sql.Connection;
 import java.sql.SQLException;
