@@ -45,9 +45,7 @@ public class DbActionsTest {
      */
     @org.junit.jupiter.api.Test
     public void testGetVersion() {
-        String expResult = "Version";
-        MockedStatic<DbActions> dbUtil = Mockito.mockStatic(DbActions.class);
-        dbUtil.when(DbActions::getVersion).thenReturn("Version");
+        final String expResult = "Version";
         String result = DbActions.getVersion();
         assertEquals(expResult, result);
     }
