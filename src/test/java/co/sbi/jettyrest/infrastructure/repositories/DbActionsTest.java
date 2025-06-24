@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
- */
 package co.sbi.jettyrest.infrastructure.repositories;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,7 +8,7 @@ import co.sbi.jettyrest.infrastructure.repositories.DbActions;
 
 /**
  *
- * @author Edwin
+ * @author Edwin Agudelo (edwin.agudelogar@gmail.com)
  */
 public class DbActionsTest {
     

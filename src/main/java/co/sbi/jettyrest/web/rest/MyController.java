@@ -9,7 +9,7 @@ import jakarta.ws.rs.core.MediaType;
 
 /**
  *
- * @author Edwin Agudelo (edwin.agudelo@gmail.com)
+ * @author Edwin Agudelo (edwin.agudelogar@gmail.com)
  */
 @Path("api")
 public class MyController {

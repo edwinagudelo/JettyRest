@@ -1,4 +1,3 @@
-
 package co.sbi.jettyrest;
 
 import java.io.FileInputStream;
@@ -7,13 +6,13 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
+import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
+import org.eclipse.jetty.ee10.servlet.ServletHolder;
 import org.glassfish.jersey.servlet.ServletContainer;
 
 /**
  *
- * @author Edwin Agudelo (edwin.agudelo@gmail.com)
+ * @author Edwin Agudelo (edwin.agudelogar@gmail.com)
  */
 public class Principal {
     
