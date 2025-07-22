@@ -7,7 +7,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 /**
  *
- * @author Edwin Agudelo (edwin.agudelo@gmail.com)
+ * @author Edwin Agudelo (edwin.agudelogar@gmail.com)
  */
 public class DbConnection {
 

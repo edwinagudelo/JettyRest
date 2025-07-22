@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author Edwin Agudelo (edwin.agudelo@gmail.com)
+ * @author Edwin Agudelo (edwin.agudelogar@gmail.com)
  */
 public class DbActions {
     
@@ -23,7 +23,7 @@ public class DbActions {
                 retorno = rs.getString(1);
             }
         }catch(SQLException sqlex){
-            logger.error("Error al traer la version de la base de datos", sqlex);
+            logger.error("Error al traer la version de la base de datos {}", sqlex.getMessage());
             retorno = "Error";
         }
         return retorno;
